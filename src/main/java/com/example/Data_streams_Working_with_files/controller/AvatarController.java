@@ -61,16 +61,6 @@ public class AvatarController {
     }
 
 
-    @PostMapping(value = "/{id}/avatar", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<String> uploadCover(@PathVariable Long id,
-                                              @RequestParam MultipartFile cover) throws IOException {
-        if (cover.getSize() > 1024 * 3000) {
-            return ResponseEntity.badRequest().body("File to big");
-        }
-        avatarService.uploadCover(id, cover);
-        return ResponseEntity.ok().build();
-    }
-
     @GetMapping(value = "/{id}/avatar/preview")
     public ResponseEntity<byte[]> downloadAvatar(@PathVariable Long id) {
         Avatar avatar = avatarService.findAvatar(id);
