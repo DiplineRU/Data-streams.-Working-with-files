@@ -59,11 +59,11 @@ The purpose of today's homework is to learn how to work with files (upload them 
 
 Create an Avatar model. We will store student avatars in it. Add the following fields to the model:
 - Long id,
-  - String filePath,
-  - long fileSize,
-  - String mediaType,
-  - byte[] data,
-  - Student student.
+- String filePath,
+- long fileSize,
+- String mediaType,
+- byte[] data,
+- Student student.
 
 <aside>
 
